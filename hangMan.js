@@ -23,18 +23,21 @@ function guessing() {
 function check() {
 	let count = 0;
 	for (count = 0; count <= (display.new.length); count++) {
-		console.log(wordSplit.new.indexOf(guess.new));
-		console.log(count);
-		if (wordSplit.new.indexOf(guess.new) == count) {
-			//console.log(guess.new, " is correct");
+		console.log(wordSplit.new.slice(count));
+		console.log(guess.new);
+		if (wordSplit.new.slice(count) == guess.new) {
+			console.log(guess.new, " is correct");
 			display.new.splice(count, 1, guess.new); // append *****
-			console.log(wordSplit.new.indexOf(guess.new));
-			console.log(count);
+		//	console.log(wordSplit.new.indexOf(guess.new));
+		//	console.log(guess.new);
 			displayUpdate();
-		} else if () {
-
-		}
-		}else {
+		} //else if () {
+		//	console.log(guess.new, " is correct");
+		//	console.log(wordSplit.new.indexOf(guess.new));
+		//	display.new.splice(count, 1, guess.new);s
+		//	console.log(count);
+		//	displayUpdate(); }
+	else {
 			console.log("Incorrect");
 		}
 	}
