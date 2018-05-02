@@ -1,6 +1,8 @@
 let guess = {};
 let wordSplit = {};
 let incorrectLetters = {};
+incorrectLetters.new += "Incorrect letters that have been guessed: "
+incorrectLetters.display = word;
 let display = {};
 window.onload = function start() {
 	word = prompt("Please enter a word for player two to guess: ");
@@ -25,7 +27,10 @@ function check() {
 			displayUpdate();
 		} else {
 			console.log("Incorrect");
-			incorrectLetters.new += guess.new;
+			if (incorrectLetters.display.indexOf(guess.new) == -1) {
+				incorrectLetters.display += guess.new;
+				incorrectLetters.new += guess.new + ", ";
+			}
 			displayUpdate();
 		}
 	}
