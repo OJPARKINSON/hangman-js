@@ -1,0 +1,28 @@
+#onecol{width: 8.33%}
+#twocol{width: 16.66%;}
+#threecol{width: 24.99%;}
+#fourcol{width: 33.33%;}
+#fivecol{width: 41.66%;}
+#sixcol{width: 49.99%;}
+#sevencol{width: 58.33%;}
+#eightcol{width: 66.66%;}
+#ninecol{width: 74.99%;}
+#tencol{width: 83.33%}
+#elevencol{width: 91.66%}
+#twelvecol{width: 100%;}
+* {
+    box-sizing: border-box;
+}
+h1 {
+    margin: 0 auto;
+}
+div {
+    margin: 20px;
+}
+#container {
+    max-width: 1280px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
