@@ -2,28 +2,28 @@
 <html>
 <head>
 	<title>Hangman</title>
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <link rel="Stylesheet" href="HangmanStylesheet.css">
-<body class="container">
-	<header>
-	</header>
-	<article>
-		<h1 class="twelvecol">Welcome to online version of Hangman</h1>
-		<p class="twelvecol">Once player one has entered the word to guess, player two please take a guess.</p>
-		<div class="twelvecol">
-			<a id="wordDisplay"></a>
-		</div>
-		<div class="twelvecol">
-			<input id="TbxGuess" type="text" min="1" max="1"></input>
-			<button onclick="guessing(), check()">check letter</button>
-		</div>
-		<div class="twelvecol">
-	    	<a id="incorrectLetters" class="twelvecol"></a>
-		</div>
-	</article>
-	<footer>
-	</footer>
+<body>
+	<div id="container">
+		<header class=row>
+			<h1 class="twelvecol">Welcome to online version of Hangman</h1>
+		</header>
+		<section class="row">
+			<p class="twelvecol">Once player one has entered the word to guess, player two please take a guess.</p>
+		</section>
+		<section class="row red">
+			<a id="wordDisplay" class="twelvecol"></a>
+		</section >
+		<section class="row red">
+			<input id="TbxGuess" type="text" min="1" max="1" class="twocol"></input>
+			<button onclick="guessing(), singleGuess()" class="twocol">check letter</button>
+		</section>
+		<section class="row">
+	    	<a class="twelvecol" id="incorrectLetters"></a>
+		</section>
+	</div>
 </body>
 <script language="javascript" src="hangMan.js"></script>
 </html>
