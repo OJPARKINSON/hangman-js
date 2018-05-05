@@ -13,12 +13,13 @@
 		<section class="row">
 			<p class="twelvecol">Once player one has entered the word to guess, player two please take a guess.</p>
 		</section>
-		<section class="row red">
+		<section class="row" id="interactiveColor">
 			<a id="wordDisplay" class="twelvecol"></a>
 		</section >
-		<section class="row red">
+		<section class="row">
 			<input id="TbxGuess" type="text" min="1" max="1" class="twocol"></input>
 			<button onclick="guessing(), singleGuess()" class="twocol">check letter</button>
+			<button onclick="anotherGo()" class="twocol" id="BtnAgain">Press for another go</button>
 		</section>
 		<section class="row">
 	    	<a class="twelvecol" id="incorrectLetters"></a>
