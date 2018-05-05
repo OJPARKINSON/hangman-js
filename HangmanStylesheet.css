@@ -13,22 +13,25 @@
 * {
     box-sizing: border-box;
 }
-h1 {
+h1{
+    padding: 0px;
     margin: 0 auto;
     font-family: impact;
     font-style: bold;
+    font-size: 5vw;
 }
 section {
-    padding: 1em;
+    padding: 0;
     color: black;
-    height: 60px;
+    height: 10vh;
+    font-size: 3vw;
+}
+p {
+    margin: 0 auto;
 }
 header {
-    height: 80px;
+    height: 15vh;
 	text-align: center;
-}
-.grey {
-    color: grey;
 }
 #container {
     max-width: 1280px;
