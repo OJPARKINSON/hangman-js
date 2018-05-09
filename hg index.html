@@ -3,13 +3,14 @@
 <head>
 	<title>Hangman</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 </head>
 <link rel="Stylesheet" href="HangmanStylesheet.css">
 <body>
+	<header class=row>
+		<h1 class="twelvecol">Welcome to online version of Hangman</h1>
+	</header>
 	<div id="container">
-		<header class=row>
-			<h1 class="twelvecol">Welcome to online version of Hangman</h1>
-		</header>
 		<section class="row">
 			<p class="twelvecol">Once player one has entered the word to guess, player two please take a guess.</p>
 		</section>
@@ -22,7 +23,7 @@
 			<button onclick="anotherGo()" class="twocol" id="BtnAgain">Press for another go</button>
 		</section>
 		<section class="row">
-	    	<a class="twelvecol" id="incorrectLetters"></a>
+	    	<p><a class="twelvecol" id="incorrectLetters"></a></p>
 		</section>
 	</div>
 </body>
