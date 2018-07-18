@@ -7,22 +7,22 @@
 </head>
 <link rel="Stylesheet" href="HangmanStylesheet.css">
 <body>
-	<header class=row>
+	<header class=twelvecol>
 		<h1 class="twelvecol">Welcome to online version of Hangman</h1>
 	</header>
 	<div id="container">
-		<section class="row">
+		<section class="twelvecol">
 			<p class="twelvecol">Once player one has entered the word to guess, player two please take a guess.</p>
 		</section>
-		<section class="row" id="interactiveColor">
+		<section class="twelvecol" id="interactiveColor">
 			<a id="wordDisplay" class="twelvecol"></a>
 		</section >
-		<section class="row">
-			<input id="TbxGuess" type="text" maxlength="1" class="twocol"></input>
-			<button onclick="guessing(), singleGuess()" class="twocol">check letter</button>
-			<button onclick="anotherGo()" class="twocol" id="BtnAgain">Press for another go</button>
+		<section class="twelvecol">
+			<input id="TbxGuess" type="text" maxlength="1" class="fourcol"></input>
+			<button onclick="guessing(), singleGuess()" class="fourcol">check letter</button>
+			<button onclick="anotherGo()" class="fourcol" id="BtnAgain">Press for another go</button>
 		</section>
-		<section class="row">
+		<section class="twelvecol">
 	    	<p><a class="twelvecol" id="incorrectLetters"></a></p>
 		</section>
 	</div>

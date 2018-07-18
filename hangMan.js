@@ -26,7 +26,7 @@ function anotherGo() {
 	document.getElementById("incorrectLetters").innerHTML = LettersGuessed.new;
 	wordSplit = word.split("");
 	goAgain.disabled = true;
-	document.getElementById("interactiveColor").style.background = "#d12141"
+	document.getElementById("interactiveColor").style.background = "#d12141";
 	displayUpdate();
 }
 
