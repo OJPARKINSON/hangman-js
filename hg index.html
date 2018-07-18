@@ -7,21 +7,34 @@
 </head>
 <link rel="Stylesheet" href="HangmanStylesheet.css">
 <body>
-	<header class=twelvecol>
-		<h1 class="twelvecol">Welcome to online version of Hangman</h1>
-	</header>
+	<header class="navbar twelvecol">
+        <div class="heightspace fourcol"></div>
+        <div class="fourcol">
+            <h1 class="twelvecol">Oliver Parkinson</h1>
+        </div>
+        <div class="heightspace fourcol">
+            <div class="heightspace twocol"></div>
+            <a href="#" class="threecol">Links</a>
+            <div class="heightspace onecol"></div>
+            <a href="#" class="threecol">Portfolio</a>
+            <div class="heightspace twocol"></div>
+        </div>
+    </header>
 	<div id="container">
-		<section class="twelvecol">
-			<p class="twelvecol">Once player one has entered the word to guess, player two please take a guess.</p>
-		</section>
+		<div class="heightspace twelvecol"></div>
 		<section class="twelvecol" id="interactiveColor">
 			<a id="wordDisplay" class="twelvecol"></a>
 		</section >
+		<div class="heightspace twelvecol"></div>
+
 		<section class="twelvecol">
-			<input id="TbxGuess" type="text" maxlength="1" class="fourcol"></input>
-			<button onclick="guessing(), singleGuess()" class="fourcol">check letter</button>
-			<button onclick="anotherGo()" class="fourcol" id="BtnAgain">Press for another go</button>
+			<div class="heightspace twocol"></div>
+			<input id="TbxGuess" type="text" maxlength="1" class="twocol"></input>
+			<button onclick="guessing(), singleGuess()" class="threecol">Check letter</button>
+			<button onclick="anotherGo()" class="threecol" id="BtnAgain">Press for another go</button>
+			<div class="heightspace twocol"></div>
 		</section>
+
 		<section class="twelvecol">
 	    	<p><a class="twelvecol" id="incorrectLetters"></a></p>
 		</section>

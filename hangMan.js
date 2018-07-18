@@ -7,6 +7,10 @@ let goAgain = document.getElementById("BtnAgain");
 
 window.onload = function start() {
 	word = prompt("Please enter a word for player two to guess: ");
+	setup()
+}
+
+function setup() {
 	document.getElementById("wordDisplay").innerHTML = (display = "_".repeat(word.length).split(""));
 	document.getElementById("incorrectLetters").innerHTML = (LettersGuessed.new = "Letters that have been guessed: ");
 	wordSplit = word.split("");
@@ -45,21 +49,18 @@ function singleGuess() {
 	for (count = 0; count <= (display.length); count++){
 		if (wordSplit[count] == guess) {
 			display.splice(count, 1, guess);
+			document.getElementById("interactiveColor").style.background = "green"; //Changes the background colour if correct
 			correctLetters++;
 		} else {
 			if (guess != wordSplit[count] && LettersGuessed.display.indexOf(guess) === -1) {
+				document.getElementById("interactiveColor").style.background = "red"; 
 				LettersGuessed.display += guess;
 				LettersGuessed.new += guess + ", ";
 			}
 		}
 	}
 	displayUpdate()
-	check()
-}
-
-function check() {
 	if (correctLetters === word.length) {
-		goAgain.disabled = false;
-		document.getElementById("interactiveColor").style.background = "green";
+		goAgain.disabled = false; //allows the button to be pressed
 	}
 }
