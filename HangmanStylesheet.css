@@ -14,6 +14,7 @@
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 header {
 	text-align: center;
@@ -35,26 +36,29 @@ section a {
     text-align: center;
 }
 section input {
-    height: 73.5px;
-    max-width: 22%;
-    font-size: 2.2em;
-    border: #4A90E2 10px;
+    height: 75px;
+    font-size: 2em;
     margin: 0px 1px;
+    border-color: #444;
+    border-width: 1px;
 }
 section button {
     height: 75px;
     font-size: 1.5em;
-    max-width: 22%;
     border-color: #444;
     border-width: 1px;
     margin: 0px 1px;
 }
 
 #interactiveColor {
-    background-color: red;
+    background-color: #444;
 }
 #wordDisplay {
     font-size: 2.2em;
+}
+#hangman {
+    max-width: 100px;
+    max-height: 100px;
 }
 #incorrectLetters {
     font-size: 1.8em;
@@ -62,10 +66,10 @@ section button {
 h1 {
     color: white;
     margin: 15px auto;
-    font-size: 2em;
+    font-size: 2em;s
 }
 .navbar {
-    background-color: #4A90E2;
+    background-color: #E24A96;
     margin: 0 auto;
     height: 90px;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;

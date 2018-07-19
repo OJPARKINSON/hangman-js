@@ -8,10 +8,10 @@
 <link rel="Stylesheet" href="HangmanStylesheet.css">
 <body>
 	<header class="navbar twelvecol">
-        <div class="heightspace fourcol"></div>
-        <div class="fourcol">
-            <h1 class="twelvecol">Oliver Parkinson</h1>
+        <div class="threecol">
+            <h1 class="twelvecol">Hangman</h1>
         </div>
+		<div class="heightspace fivecol"></div>
         <div class="heightspace fourcol">
             <div class="heightspace twocol"></div>
             <a href="#" class="threecol">Links</a>
@@ -22,21 +22,39 @@
     </header>
 	<div id="container">
 		<div class="heightspace twelvecol"></div>
-		<section class="twelvecol" id="interactiveColor">
-			<a id="wordDisplay" class="twelvecol"></a>
-		</section >
+		<section class="twelvecol">
+			<div class="heightspace fivecol"></div>
+			<button onclick="start()" class="twocol">Click to start</button>
+			<div class="heightspace fivecol"></div>
+		</section>
+		<div class="heightspace twelvecol"></div>
+		<div class="twelvecol">
+			<div class="heightspace twocol"></div>
+			<section class="eightcol" id="interactiveColor">
+				<a id="wordDisplay" class="twelvecol"></a>
+			</section >
+			<div class="heightspace twocol"></div>
+		</div>
+		<div class="twelvecol">
+			<div class="heightspace twocol"></div>
+			<section class="eightcol" id="interactiveColor">
+				<img id="hangman" class="twelvecol" href="">
+			</section >
+			<div class="heightspace twocol"></div>
+		</div>
 		<div class="heightspace twelvecol"></div>
 
 		<section class="twelvecol">
 			<div class="heightspace twocol"></div>
-			<input id="TbxGuess" type="text" maxlength="1" class="twocol"></input>
+			<input id="TbxGuess" type="text" maxlength="1" class="twocol" placeholder=" guess here"></input>
 			<button onclick="guessing(), singleGuess()" class="threecol">Check letter</button>
 			<button onclick="anotherGo()" class="threecol" id="BtnAgain">Press for another go</button>
 			<div class="heightspace twocol"></div>
 		</section>
 
 		<section class="twelvecol">
-	    	<p><a class="twelvecol" id="incorrectLetters"></a></p>
+	    	<p><a class="tencol" id="incorrectLetters"></a></p>
+			<div class="heightspace twocol"></div>
 		</section>
 	</div>
 </body>
