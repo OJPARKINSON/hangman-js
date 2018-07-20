@@ -30,7 +30,7 @@
 		<div class="heightspace twelvecol"></div>
 		<div class="twelvecol">
 			<div class="heightspace twocol"></div>
-			<section class="eightcol" id="interactiveColor">
+			<section class="eightcol textdisplay" id="interactiveColor">
 				<a id="wordDisplay" class="twelvecol"></a>
 			</section >
 			<div class="heightspace twocol"></div>
@@ -38,19 +38,25 @@
 		<div class="twelvecol">
 			<div class="heightspace twocol"></div>
 			<section class="eightcol" id="interactiveColor">
-				<img id="hangman" class="twelvecol" href="">
+				<div class="heightspace fivecol"></div>
+				<img id="hangman" class="twocol">
+				<div class="heightspace fivecol"></div>
 			</section >
 			<div class="heightspace twocol"></div>
 		</div>
 		<div class="heightspace twelvecol"></div>
 
 		<section class="twelvecol">
-			<div class="heightspace twocol"></div>
-			<input id="TbxGuess" type="text" maxlength="1" class="twocol" placeholder=" guess here"></input>
-			<button onclick="guessing(), singleGuess()" class="threecol">Check letter</button>
-			<button onclick="anotherGo()" class="threecol" id="BtnAgain">Press for another go</button>
-			<div class="heightspace twocol"></div>
+			<div class="heightspace fourcol"></div>
+			<input id="TbxGuess" type="text" maxlength="1" class="fourcol" placeholder=" guess here"></input>
+			<div class="heightspace fourcol"></div>
 		</section>
+		<section class="twelvecol">
+			<div class="heightspace fourcol"></div>
+			<button onclick="guessing(), singleGuess()" class="fourcol">Check letter</button>
+			<div class="heightspace fourcol"></div>
+		</section>
+
 
 		<section class="twelvecol">
 	    	<p><a class="tencol" id="incorrectLetters"></a></p>
