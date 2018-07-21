@@ -67,11 +67,12 @@ function displayUpdate() {
 	var img = ["hang1.png", "hang2.png", "hang3.png", "hang4.png", "hang5.png", "hang6.png", "hang7.png", "hang8.png", "hang9.png", "hang10.png"]
 	document.getElementById('hangman').src = img[wrongg];
 }
+
 var input = document.getElementById("TbxGuess");
 input.addEventListener("keyup", function(event) {
   event.preventDefault();
   if (event.keyCode === 13) {
-    guessing()
-	singleGuess()
+    guessing();
+	singleGuess();
   }
 });
