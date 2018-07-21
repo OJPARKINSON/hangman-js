@@ -36,6 +36,9 @@ function guessing() {
 }
 
 function singleGuess() {
+	if (guess == " ") {
+		exit();
+	}
 	var wrongcount = 0; //sets the cout every guess so that if non of the words match the back turns red
 	var valiset = display.length + 1; //makes sure that the wrong and correct letters are split
 	for (count = 0; count <= (display.length); count++){
@@ -54,16 +57,21 @@ function singleGuess() {
 		}
 	}
 	displayUpdate()
-	displayimg()
 }
 function displayUpdate() {
 	document.getElementById("wordDisplay").innerHTML = (display);
 	document.getElementById("incorrectLetters").innerHTML = (LettersGuessed.new);
-}
-function displayimg() {
 	if (wrongg >= 9) {
 		wrongg = 9;
 	} //maxes the img as it will go unidifined
 	var img = ["hang1.png", "hang2.png", "hang3.png", "hang4.png", "hang5.png", "hang6.png", "hang7.png", "hang8.png", "hang9.png", "hang10.png"]
 	document.getElementById('hangman').src = img[wrongg];
 }
+var input = document.getElementById("TbxGuess");
+input.addEventListener("keyup", function(event) {
+  event.preventDefault();
+  if (event.keyCode === 13) {
+    guessing()
+	singleGuess()
+  }
+});
