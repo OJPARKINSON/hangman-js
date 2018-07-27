@@ -30,7 +30,8 @@ function setup() {
 }
 
 function guessing() {
-	guess = document.getElementById("TbxGuess").value;
+	guesss = document.getElementById("TbxGuess").value;
+	word = guesss.toLowerCase();
 	document.getElementById("TbxGuess").value = "";
 	guesses = guesses + 1;
 }
