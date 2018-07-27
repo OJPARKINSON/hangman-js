@@ -67,6 +67,7 @@ function displayUpdate() {
 	} //maxes the img as it will go unidifined
 	var img = ["hang1.png", "hang2.png", "hang3.png", "hang4.png", "hang5.png", "hang6.png", "hang7.png", "hang8.png", "hang9.png", "hang10.png"]
 	document.getElementById('hangman').src = img[wrongg]; //sets the image so that the user sees the hangman
+	document.getElementById('hangman').alt = "display of hangman in different states";
 }
 
 var input = document.getElementById("TbxGuess");
