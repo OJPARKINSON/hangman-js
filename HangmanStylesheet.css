@@ -18,8 +18,6 @@
 }
 header {
 	text-align: center;
-    max-width: 1280px;
-    width: 100%;
 }
 #container {
     max-width: 1280px;
@@ -113,5 +111,8 @@ h1 {
     }
     .navbar {
         height: 50px;
+    }
+    section input {
+        font-size: 1.2em;
     }
 }
