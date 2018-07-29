@@ -47,7 +47,6 @@ function singleGuess() {
 		} if (guess != wordSplit[count]) { //gets the wrong guesses
 			 wrongcount++;
 			if (wrongcount == valiset) { //makes sure that the guess is wrong
-				navigator.vibrate(500);
 				document.getElementById("interactiveColor").style.background = "#b14c5a"; //changes the background of the word display
 				wrongg++;
 			}
