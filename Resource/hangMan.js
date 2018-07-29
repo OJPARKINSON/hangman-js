@@ -5,7 +5,6 @@ let display = [];
 let wrongg = 0;
 let goAgain = document.getElementById("BtnAgain");
 document.getElementById("TbxGuess", "btnguess").disabled = true; //disables the buttons before the game has started
-
 function start() {
 	wrongg -= wrongg;
 	guesses -= guesses;
@@ -29,18 +28,16 @@ function setup() {
 
 function guessing() {
 	guesss = document.getElementById("TbxGuess").value;
-	word = guesss.toLowerCase();
+	guess = guesss.toLowerCase();
 	document.getElementById("TbxGuess").value = "";
 	guesses = guesses + 1;
 }
 
 function singleGuess() {
-	if (guess == " ") {
-		exit();
-	}
+	if (guess == " ") {exit();}
 	var wrongcount = 0; //sets the cout every guess so that if non of the words match the back turns red
 	var valiset = display.length + 1; //makes sure that the wrong and correct letters are split
-	for (count = 0; count <= (display.length); count++){
+	for (count = 0; count <= display.length; count++){
 		if (wordSplit[count] == guess) { 	//checks each letter compared with the letter that was guessed
 			display.splice(count, 1, guess); //gets red of the _ in the guessed words places and puts it in
 			document.getElementById("interactiveColor").style.background = "green"; //Changes the background colour if correct
@@ -64,7 +61,7 @@ function displayUpdate() {
 		wrongg = 9;
 	} //maxes the img as it will go unidifined
 	var img = ["hang1.png", "hang2.png", "hang3.png", "hang4.png", "hang5.png", "hang6.png", "hang7.png", "hang8.png", "hang9.png", "hang10.png"]
-	document.getElementById('hangman').src = "Resource/" + img[wrongg]; //sets the image so that the user sees the hangman
+	document.getElementById('hangman').src = ("Resource/" + img[wrongg]); //sets the image so that the user sees the hangman
 	document.getElementById('hangman').alt = "display of hangman in different states";
 }
 
