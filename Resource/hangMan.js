@@ -4,7 +4,7 @@ let LettersGuessed = {};
 let display = [];
 let incorrectguess = 0;
 function start() {
-	incorrectguess -= incorrectguess;
+	incorrectguess -= incorrectguess; hangmanDisplay()
 	word -= word; //resets the word for multiple goes
 	display -= display;
 	wordSplit -= wordSplit;
@@ -25,7 +25,7 @@ function guessing() {
 	document.getElementById("TbxGuess").value = "";
 }
 function singleGuess() {
-	if (guess == " ") {exit();}
+	if (guess == " " || guess == "") {end();}
 	var wrongcount = 0; //sets the cout every guess so that if non of the words match the back turns red
 	for (count = 0; count <= display.length; count++){
 		if (wordSplit[count] == guess) { 	//checks each letter compared with the letter that was guessed
@@ -34,23 +34,26 @@ function singleGuess() {
 		} else if (guess != wordSplit[count] && LettersGuessed.display.indexOf(guess) === -1) {  //sees if guess is already in letters guessed
 			LettersGuessed.display += guess;
 			LettersGuessed.new += guess + ", ";
-		} if (guess != wordSplit[count]) { //gets the wrong guesses
-			 wrongcount++;
+		} if (guess != wordSplit[count]) {
+			wrongcount++;
 			if (wrongcount == (display.length + 1)) { //makes sure that the guess is wrong
 				document.getElementById("interactiveColor").style.background = "#b14c5a"; //changes the background of the word display
 				incorrectguess++;
 			}
+			hangmanDisplay()
 		}
 	}
 	displayUpdate()
 }
-function displayUpdate() {
-	document.getElementById("wordDisplay").innerHTML = (display);
-	document.getElementById("incorrectLetters").innerHTML = (LettersGuessed.new);
+function hangmanDisplay() {
 	if (incorrectguess >= 9) {incorrectguess = 9;} //maxes the img as it will go unidifined
 	var img = ["hang1.png", "hang2.png", "hang3.png", "hang4.png", "hang5.png", "hang6.png", "hang7.png", "hang8.png", "hang9.png", "hang10.png"]
 	document.getElementById('hangman').src = ("Resource/" + img[incorrectguess]); //sets the image so that the user sees the hangman
 	document.getElementById('hangman').alt = "display of hangman in different states"; //sets an alt tag when the image is displayed
+}
+function displayUpdate() {
+	document.getElementById("wordDisplay").innerHTML = (display);
+	document.getElementById("incorrectLetters").innerHTML = (LettersGuessed.new);
 }
 
 var input = document.getElementById("TbxGuess");
