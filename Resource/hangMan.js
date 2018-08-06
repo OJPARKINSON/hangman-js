@@ -39,11 +39,9 @@ function singleGuess() {
 			if (wrongcount == (display.length + 1)) { //makes sure that the guess is wrong
 				document.getElementById("interactiveColor").style.background = "#b14c5a"; //changes the background of the word display
 				incorrectguess++;
-			}
-			hangmanDisplay()
+			}  hangmanDisplay()
 		}
-	}
-	displayUpdate()
+	}   displayUpdate()
 }
 function hangmanDisplay() {
 	if (incorrectguess >= 9) {incorrectguess = 9;} //maxes the img as it will go unidifined
