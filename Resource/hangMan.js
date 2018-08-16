@@ -25,7 +25,6 @@ function guessing() {
 	document.getElementById("TbxGuess").value = "";
 }
 function singleGuess() {
-	if (guess == " " || guess == "") {end();}
 	var wrongcount = 0; //sets the cout every guess so that if non of the words match the back turns red
 	for (count = 0; count <= display.length; count++){
 		if (wordSplit[count] == guess) { 	//checks each letter compared with the letter that was guessed
@@ -35,6 +34,7 @@ function singleGuess() {
 			LettersGuessed.display += guess;
 			LettersGuessed.new += guess + ", ";
 		} if (guess != wordSplit[count]) {
+			if (guess == " " || guess == "") {end();}
 			wrongcount++;
 			if (wrongcount == (display.length + 1)) { //makes sure that the guess is wrong
 				document.getElementById("interactiveColor").style.background = "#b14c5a"; //changes the background of the word display
