@@ -34,7 +34,7 @@ function singleGuess() {
 			LettersGuessed.display += guess;
 			LettersGuessed.new += guess + ", ";
 		} if (guess != wordSplit[count]) {
-			if (guess == " " || guess == "") {end();}
+			if (guess == " " || guess == "") {end();} //makes sure that if a space is in the word it isn't immediately exited
 			wrongcount++;
 			if (wrongcount == (display.length + 1)) { //makes sure that the guess is wrong
 				document.getElementById("interactiveColor").style.background = "#b14c5a"; //changes the background of the word display
@@ -43,18 +43,20 @@ function singleGuess() {
 		}
 	}   displayUpdate()
 }
+
 function hangmanDisplay() {
 	if (incorrectguess >= 9) {incorrectguess = 9;} //maxes the img as it will go unidifined
 	var img = ["hang1.png", "hang2.png", "hang3.png", "hang4.png", "hang5.png", "hang6.png", "hang7.png", "hang8.png", "hang9.png", "hang10.png"]
 	document.getElementById('hangman').src = ("Resource/" + img[incorrectguess]); //sets the image so that the user sees the hangman
 	document.getElementById('hangman').alt = "display of hangman in different states"; //sets an alt tag when the image is displayed
 }
+
 function displayUpdate() {
 	document.getElementById("wordDisplay").innerHTML = (display);
 	document.getElementById("incorrectLetters").innerHTML = (LettersGuessed.new);
 }
 
-var input = document.getElementById("TbxGuess");
+var input = document.getElementById("TbxGuess"); //enter key can be used to enter a guess
 input.addEventListener("keyup", function(event) {
   event.preventDefault();
   if (event.keyCode === 13) {
